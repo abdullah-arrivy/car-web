@@ -17,18 +17,19 @@ const FeedBack = () => {
     [comments]
   );
 
+
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
+      <div className="grid grid-cols-12 gap-6">
+        <div className="col-span-12 md:col-span-12 lg:col-span-4">
           <FeedBackForm handleSubmit={handleSubmit} />
         </div>
-        <div>
+        <div className="col-span-12 md:col-span-12 lg:col-span-8">
           {comments.length === 0 ? (
             <NotFound message={"No Comment yet!"} />
           ) : (
             comments.map((cmt, index) => (
-              <div key={index}>
+              <div key={index} >
                 <FeedBackCard comment={cmt} />
               </div>
             ))

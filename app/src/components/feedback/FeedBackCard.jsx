@@ -3,7 +3,7 @@ import React, { memo } from "react";
 const FeedBackCard = ({ comment }) => {
   console.log("feed back card");
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg mb-2 ">
+    <div className="bg-white p-6 rounded-lg border  border-black/10 mb-2 ">
       <div className="bg-gray-100 p-4 rounded-lg shadow-sm mb-4 hover:bg-gray-200">
         <h4 className="text-xl font-bold text-blue-600">{comment.userName}</h4>
         <p className="text-sm text-gray-500">{comment.emailAddress}</p>

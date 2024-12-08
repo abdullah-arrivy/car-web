@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 const FeedBackForm = React.memo(({ handleSubmit }) => {
-
-  console.log("form called")
+  console.log("form called");
   const [formData, setFormData] = useState({
     userName: "",
     emailAddress: "",
@@ -38,8 +37,9 @@ const FeedBackForm = React.memo(({ handleSubmit }) => {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-white p-6 rounded-lg shadow-lg space-y-4"
+      className="bg-white p-6 rounded-lg border  border-black/10  space-y-4"
     >
+      <h1>Feed Back Form</h1>
       {fields.map((field) => (
         <div key={field.name}>
           <label

@@ -28,7 +28,7 @@ const CarCard = ({ cars }) => {
             <div className="pt-2 flex justify-end">
               <button
                 onClick={() => handleEdit(car)}
-                className="px-4 py-2 bg-blue-500 text-white rounded-md mr-2"
+                className="px-4 py-2  text-black rounded-md mr-2"
               >
                 Edit
               </button>

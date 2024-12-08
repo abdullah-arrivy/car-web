@@ -6,7 +6,7 @@ import { routeArray } from "./routes";
 
 function App() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <BrowserRouter>
         <Routes>
           <Route
