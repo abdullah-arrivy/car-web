@@ -1,22 +1,8 @@
-import React, { memo, useState } from "react";
+import React from "react";
 import { Link } from "react-router";
 import { routeText } from "../../routes/RouteText";
 
-const CarCard = ({ cars }) => {
-  const [edit, setEdit] = useState(false);
-  const [brand, setBrand] = useState(null);
-
-  const handleEdit = (car) => {
-    setBrand(car);
-    setEdit(true);
-  };
-
-  const handleCancel = () => {
-    setBrand(null);
-    setEdit(false);
-  };
-
-
+const CarCard = ({ cars, onEdit }) => {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4">
       {cars.map((car) => (
@@ -27,8 +13,8 @@ const CarCard = ({ cars }) => {
           <div className="card">
             <div className="pt-2 flex justify-end">
               <button
-                onClick={() => handleEdit(car)}
-                className="px-4 py-2  text-black rounded-md mr-2"
+                onClick={() => onEdit(car)}
+                className="px-4 py-2 text-black rounded-md mr-2"
               >
                 Edit
               </button>
@@ -56,45 +42,10 @@ const CarCard = ({ cars }) => {
               </Link>
             </div>
           </div>
-
-          {edit && brand?.id === car.id && (
-            <div className="edit-overlay">
-              <div className="p-4 bg-white shadow-lg rounded-lg">
-                <h3 className="font-bold text-xl">Edit {car.name}</h3>
-                <div className="mt-4">
-                  <label className="block text-sm font-medium text-gray-700">
-                    Brand Name
-                  </label>
-                  <input
-                    type="text"
-                    value={brand.name}
-                    onChange={(e) =>
-                      setBrand({ ...brand, name: e.target.value })
-                    }
-                    className="mt-2 w-full border border-gray-300 p-2 rounded-md"
-                  />
-                </div>
-                <div className="mt-4 flex justify-end">
-                  <button
-                    onClick={handleCancel}
-                    className="px-4 py-2 bg-gray-300 text-black rounded-md mr-2"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={handleCancel}
-                    className="px-4 py-2 bg-blue-500 text-white rounded-md"
-                  >
-                    Save
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       ))}
     </div>
   );
 };
 
-export default memo(CarCard);
+export default React.memo(CarCard);
