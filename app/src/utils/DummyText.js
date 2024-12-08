@@ -2,7 +2,7 @@ const carText = [
     {
       id: 1,
       name: "Toyota",
-      logo: "https://example.com/toyota-logo.png",
+      logo: "https://fakeimg.pl/350x300/?text=Toyota",
       description: "Toyota is a Japanese automobile manufacturer known for reliable and affordable cars.",
       popularModels: [
         {
@@ -25,7 +25,7 @@ const carText = [
     {
       id: 2,
       name: "Honda",
-      logo: "https://example.com/honda-logo.png",
+      logo: "https://fakeimg.pl/350x300/?text=Honda",
       description: "Honda is renowned for its innovation, fuel-efficient vehicles, and sporty designs.",
       popularModels: [
         {
@@ -48,7 +48,7 @@ const carText = [
     {
       id: 3,
       name: "Suzuki",
-      logo: "https://example.com/suzuki-logo.png",
+      logo: "https://fakeimg.pl/350x300/?text=Suzuki",
       description: "Suzuki specializes in compact vehicles that are budget-friendly and practical.",
       popularModels: [
         {

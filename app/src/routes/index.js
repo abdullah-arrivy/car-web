@@ -1,3 +1,4 @@
+import CarDetail from "../pages/CarDetail";
 import FeedBack from "../pages/FeedBack";
 import HomePage from "../pages/Home";
 import { routeText } from "./RouteText";
@@ -11,4 +12,8 @@ export const routeArray = [
     component: FeedBack,
     path: routeText.FEED_BACK_URL,
   },
+  {
+    component: CarDetail,
+    path: routeText.CAR_DETAIL_URL,
+  }
 ];

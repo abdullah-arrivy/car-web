@@ -1,6 +1,7 @@
-import React, { memo, useRef } from "react";
+import React, { memo } from "react";
 
 const Search = React.memo(({ onSearch }) => {
+  console.log("seach")
   return (
     <div>
       <input
@@ -13,3 +14,5 @@ const Search = React.memo(({ onSearch }) => {
 });
 
 export default memo(Search);
+
+
