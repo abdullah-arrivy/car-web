@@ -7,25 +7,19 @@ import NotFound from "../components/common/NotFound";
 const HomePage = () => {
   const [filteredData, setFilteredData] = useState(carText);
 
-  const handleSearch = useCallback(
-    (query) => {
-      console.log("Search Query:", query);
+  const handleSearch = useCallback((query) => {
+    const filtered = carText.filter((car) =>
+      car.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredData(filtered);
+  }, []);
 
-      const filtered = carText.filter((car) =>
-        car.name.toLowerCase().includes(query.toLowerCase())
-      );
-      console.log("Filtered Cars:", filtered);
-      setFilteredData(filtered);
-    },
-    []
-  );
-
-  console.log("lofa111");
+  console.log("lofa1111");
   return (
     <div>
       <Search onSearch={handleSearch} />
       {filteredData.length === 0 ? (
-        <NotFound message={'No Data Found'} />
+        <NotFound message={"No Data Found"} />
       ) : (
         <CarCard cars={filteredData} />
       )}

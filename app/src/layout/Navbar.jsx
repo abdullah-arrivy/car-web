@@ -1,11 +1,7 @@
 import React from "react";
-import { routeText } from "../routes/RouteText";
 import { Link } from "react-router"; 
+import { navArray } from "../utils/NavbarArray";
 
-const navArray = [
-  { label: "Home", path: routeText.HOME_URL },
-  { label: "Feedback", path: routeText.FEED_BACK_URL },
-];
 
 const NavBar = () => {
   return (

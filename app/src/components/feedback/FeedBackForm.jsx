@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const FeedBackForm = React.memo(({ handleSubmit }) => {
 
+  console.log("form called")
   const [formData, setFormData] = useState({
     userName: "",
     emailAddress: "",
