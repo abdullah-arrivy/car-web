@@ -19,7 +19,7 @@ const HomePage = () => {
     []
   );
 
-  console.log("lofa1");
+  console.log("lofa111");
   return (
     <div>
       <Search onSearch={handleSearch} />
