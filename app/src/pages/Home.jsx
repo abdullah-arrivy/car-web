@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import CarCard from "../components/home/CarCard";
 import Search from "../components/home/Search";
 import carText from "../utils/DummyText";
+import NotFound from "../components/common/NotFound";
 
 const HomePage = () => {
   const [filteredData, setFilteredData] = useState(carText);
@@ -24,7 +25,7 @@ const HomePage = () => {
     <div>
       <Search onSearch={handleSearch} />
       {filteredData.length === 0 ? (
-        <div className="mt-4 text-center">Nothing to show</div>
+        <NotFound message={'No Data Found'} />
       ) : (
         <CarCard cars={filteredData} />
       )}
