@@ -35,7 +35,7 @@ const HomePage = () => {
     [filteredData]
   );
 
-  console.log("ss")
+  console.log("ss");
   return (
     <div>
       <Search onSearch={handleSearch} />

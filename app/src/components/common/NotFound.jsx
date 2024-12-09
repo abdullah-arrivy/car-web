@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const NotFound = ({ message }) => {
   console.log("not found text")
@@ -9,4 +9,5 @@ const NotFound = ({ message }) => {
   );
 };
 
-export default NotFound;
+export default memo(NotFound);
+

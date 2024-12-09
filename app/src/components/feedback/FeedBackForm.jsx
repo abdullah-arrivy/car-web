@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const FeedBackForm = React.memo(({ handleSubmit }) => {
-  console.log("form called");
+  // console.log("form called");
   const [formData, setFormData] = useState({
     userName: "",
     emailAddress: "",
@@ -55,7 +55,7 @@ const FeedBackForm = React.memo(({ handleSubmit }) => {
               value={formData[field.name]}
               onChange={handleChange}
               placeholder={field.placeholder}
-              required
+              // required
               rows="4"
               className="mt-1 block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -67,7 +67,7 @@ const FeedBackForm = React.memo(({ handleSubmit }) => {
               value={formData[field.name]}
               onChange={handleChange}
               placeholder={field.placeholder}
-              required
+              // required
               className="mt-1 block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           )}

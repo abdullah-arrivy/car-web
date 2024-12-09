@@ -5,9 +5,7 @@ const CarDetail = () => {
   const location = useLocation();
   const data = location?.state;
   console.log(data);
-  useEffect(() => {
-    // console.log("***data***", data);
-  }, [data?.id]);
+  useEffect(() => {}, [data?.id]);
   console.log("detail changes1");
   return (
     <div>
